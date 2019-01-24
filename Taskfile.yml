@@ -1,0 +1,12 @@
+version: '2'
+
+tasks:
+  deploy:
+    cmds:
+      - npm run docs:build
+      - sh deploy.sh
+      - rm -rf docs/.vuepress/dist
+
+  clean:
+    cmds:
+      - rm -rf docs/.vuepress/dist
